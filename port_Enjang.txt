@@ -1,0 +1,19 @@
+<VirtualHost *:80>
+        ServerName moody-fox-61.a276.dcdg.xyz
+        ServerAlias www.moody-fox-61.a276.dcdg.xyz
+
+        ProxyRequests Off
+        <Proxy *>
+          Order deny,allow
+          Allow from all
+        </Proxy>
+        
+        ProxyPass / http://127.0.0.1:3000/
+        ProxyPassReverse / http://127.0.0.1:3000/
+
+        <Location />
+          Order allow,deny
+          Allow from all
+        </Location>
+
+   </VirtualHost>
