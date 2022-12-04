@@ -1,6 +1,6 @@
 <VirtualHost *:80>
-        ServerName moody-fox-61.a276.dcdg.xyz
-        ServerAlias www.moody-fox-61.a276.dcdg.xyz
+        ServerName domain.local
+        ServerAlias www.domain.local
 
         ProxyRequests Off
         <Proxy *>
